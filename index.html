@@ -1,0 +1,16 @@
+<script src="vue.global.js"></script>
+<script src="jquery.min.js"></script>
+<script src="tailwind.js"></script>
+
+<link rel="stylesheet" href="select3.css">
+<div id="app">
+    <button @click="change()">New Data!...</button>
+    <hr>
+    <select2-vue :options="data1.data" v-if="data1.data.length > 0" v-model="data1.value" formname="klavuz"
+        :id="data1.id" :text="data1.text"></select2-vue>
+  
+    <select2-vue :options="data2.data" v-if="data2.data.length > 0" v-model="data2.value" formname="klavuz"
+        :id="data2.id" :text="data2.text"></select2-vue>
+</div>
+<script type="module" src="select3.js"></script>
+<script src="Select2Vue.js"></script>
