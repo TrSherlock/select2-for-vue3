@@ -164,7 +164,7 @@ const Select2Vue = {
                 $refParent.scrollTop = $ref.offsetTop - $refParent.offsetTop - ($refParent.offsetHeight / 2 - $ref.offsetHeight / 2);
             })
         },
-        select(event, i, eventType) {
+        select(event, i) {
             this.setIndex = i
             this.$emit('update:modelValue', this.options[i][this.id]);
             this.$emit('change', this.options[i][this.id]);
