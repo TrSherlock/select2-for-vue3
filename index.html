@@ -3,14 +3,15 @@
 <script src="tailwind.js"></script>
 
 <link rel="stylesheet" href="select2.css">
-<div id="app">
-    <button @click="change()">New Data!...</button>
-    <hr>
-    <select2-vue :options="data1.data" v-if="data1.data.length > 0" v-model="data1.value" formname="klavuz"
-        :id="data1.id" :text="data1.text"></select2-vue>
-  
-    <select2-vue :options="data2.data" v-if="data2.data.length > 0" v-model="data2.value" formname="klavuz"
-        :id="data2.id" :text="data2.text"></select2-vue>
-</div>
+    <div id="app">
+        <select2-vue @change="klavuz2.change($event)" :options="klavuz2.data" v-if="klavuz2.data.length > 0"
+            v-model="klavuz2.value" formname="klavuz" :id="klavuz2.id" :text="klavuz2.text"></select2-vue>
+        <hr>
+        <select2-vue @change="klavuz2.change($event)" :options="klavuz2.data" v-if="klavuz2.data.length > 0"
+            v-model="klavuz2.value" formname="klavuz" :id="klavuz2.id" :text="klavuz2.text"></select2-vue>
+        <hr>
+        <select2-vue @change="data2.change($event)" :options="data2.data" v-if="data2.data.length > 0"
+            v-model="data2.value" formname="klavuz" :id="data2.id" :text="data2.text"></select2-vue>
+    </div>
 <script type="module" src="vueApp.js"></script>
 <script src="Select2Vue.js"></script>
