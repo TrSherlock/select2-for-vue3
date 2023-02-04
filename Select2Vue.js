@@ -166,8 +166,8 @@ const Select2Vue = {
         },
         select(event, i) {
             this.setIndex = i
-            this.$emit('update:modelValue', this.options[i][this.id]);
-            this.$emit('change', this.options[i][this.id]);
+            this.$emit('update:modelValue', this.options[i][this.id]);//[this.id]
+            this.$emit('change', i);//[this.id]
             this.selectElement = event.target;
             this.$refs.ul.scrollTop = event.target.offsetTop - this.$refs.ul.offsetTop - (this.$refs.ul.offsetHeight / 2 - event.target.offsetHeight / 2);
             this.$refs.selectRef.classList.remove("select2-container--open");
